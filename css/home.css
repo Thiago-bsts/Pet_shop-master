@@ -141,7 +141,6 @@ body {
 }
 
 
-
 .Prod {
     display: grid;
     align-items: end;
@@ -203,6 +202,18 @@ footer {
     header {
         flex-direction: column;
         height: auto;
+    }
+
+    .produtos {
+        margin-top: 50px;
+    }
+
+    .bv{
+        flex-direction: column;
+        height: auto;
+    }
+    .seta{
+        display: none;
     }
 
     .busca {
