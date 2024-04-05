@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patas&pelos.com.br</title>
+    <title>Patas&pelos</title>
+    <link rel="icon" type="imagem/x-icon" href="img/logopet1.png">
     <link rel="stylesheet" href="css/carrinho.css">
 </head>
     <header>
         <div class="logo">
-            <a href="home.html"><img src="/img/logopet1.png" alt="Logo do Pet Shop" width="120"></a> 
+            <a href="index.html"><img src="/img/logopet1.png" alt="Logo do Pet Shop" width="120"></a> 
         </div>
         <div class="busca">
             <input type="text" id="busca" >
         </div>
     <div class="info_cab">
-        <a href="home.html">Home</a>
+        <a href="index.html">Home</a>
         <a href="forms_ctt.html">Contato</a>
         <a href="sobreNos.html">Sobre nos</a>
         <a href="carrinho.html"><img src="/img/carrinho.png" width="35"></a>
@@ -36,8 +37,31 @@
                 <div class="cll_fretes">
                     <h3>Calcule frete</h3>
                     <div class="cll_frete">
-                        <input type="text" id="Endereço" placeholder="busca cep" ></input>
-                        <button>Calcular</button>
+                        <div class="style_frete">
+                            <label for="cepInput">Digite o CEP:</label>
+                            <input type="text" id="cepInput">
+                            <button onclick="buscarEndereco()">busca</button>
+                            <div id="endereco"></div>
+
+                            <script>
+                                function buscarEndereco(){
+                                    var cep = document.getElementById('cepInput').value;
+                                    var url = `https://viacep.com.br/ws/${cep}/json/`;
+                                    
+                                    fetch(url)
+                                    .then(response => response.json())
+                                    .then(data => {
+                                    if(data.erro){
+                                            document.getElementById('endereco').innerText = "cep não encontrado.";
+                                        } else{
+                                            var endereco = `CEP: ${data.cep}, ${data.logradouro}, ${data.bairro}, ${data.localidade}, ${data.uf}`;
+                                            document.getElementById('endereco').innerText = endereco;
+                                        }                                    
+                                    })
+                                    .catch(erro => console.erro('Erro:', error));
+                                }
+                            </script>
+                        </div>
                     </div>
                 </div>
                 <div class="rsm_pdd">
