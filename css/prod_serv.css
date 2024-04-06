@@ -168,3 +168,35 @@ footer {
     
 }
 
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .produtos {
+        margin-top: 50px;
+    }
+    .busca {
+        width: 100%;
+    }
+
+    .produtos {
+        flex-direction: column;
+        margin-top: -150px;
+        padding: 0 10px;
+    }
+
+    .Prod {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    .info_cttD, .info_cttC, .info_cttE {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+

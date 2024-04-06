@@ -90,12 +90,15 @@ footer {
     justify-content: space-between;
 }
 
-@media only screen and (max-width: 768px) {
-    .busca {
-        width: 40%;
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
     }
-
     .container {
         padding: 10px;
+    }
+    .busca {
+        width: 100%;
     }
 }

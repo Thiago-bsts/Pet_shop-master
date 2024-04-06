@@ -209,6 +209,18 @@ footer {
     }
 
     .bv{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 5px;
+    }
+
+    .pro_dstc{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .bv{
         flex-direction: column;
         height: auto;
     }
@@ -246,4 +258,3 @@ footer {
         text-align: center;
     }
 }
-

@@ -327,14 +327,12 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-    /* Aplique estilos específicos para telas maiores que 768px */
     .busca {
         width: 30%;
     }
 }
 
 @media screen and (min-width: 1024px) {
-    /* Aplique estilos específicos para telas maiores que 1024px */
     .container {
         justify-content: space-between;
     }
@@ -349,6 +347,6 @@ footer {
     .cll_fretes, 
     .tl_cmpr, 
     .bandeiras {
-        width: auto; /* Ou defina uma largura específica para telas maiores */
+        width: auto; /
     }
 }
